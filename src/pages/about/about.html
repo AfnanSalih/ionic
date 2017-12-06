@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Add person
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list>
+        
+          <ion-item>
+            <ion-label floating>First name</ion-label>
+            <ion-input type="text" [(ngModel)] = "firstName"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label floating>Last name</ion-label>
+              <ion-input type="text" [(ngModel)] = "lastName" ></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>country</ion-label>
+                <ion-input type="text" [(ngModel)] = "country "></ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-label floating>city</ion-label>
+                  <ion-input type="text" [(ngModel)]="city" ></ion-input>
+                </ion-item>  
+                <ion-item>
+                
+                    <ion-label floating>phone</ion-label>
+                    <ion-input type="text" [(ngModel)]="phone" ></ion-input>
+                  </ion-item>  
+                  <ion-item>
+
+
+                      <ion-label floating>salary</ion-label>
+                      <ion-input type="text" [(ngModel)]="salary" ></ion-input>
+                    </ion-item>  
+                    <ion-item>
+                        
+                        <ion-label floating>email</ion-label>
+                        <ion-input type="text" [(ngModel)]="email" ></ion-input>
+                      </ion-item>  
+                      <ion-item>
+                          
+
+                    <button ion-button large color="danger"
+                     (click)="createPerson(firstName,lastName,country, city, phone, salary,email)">
+                        <ion-icon name="contact"></ion-icon>
+                      addPerson
+                    </button>
+                  </ion-item> 
+
+                
+        
+        </ion-list>
+
+</ion-content>

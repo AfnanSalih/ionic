@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar >
+    <ion-title>Persons Database</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="nav">
+  <h2>Welcome to Persons Database</h2>
+ <!-- <ion-list *ngIf="persons$ | async; let persons"> -->
+  <ion-list>
+      <button ion-item *ngFor="let item of items$   | async json" (click)="itemSelected(item.payload.key,item.payload.val().firstName,item.payload.val().lastName,item.payload.val().country,item.payload.val().city,item.payload.val().phone,item.payload.val().salary,item.payload.val().email)"> 
+          
+          
+
+
+      <ion-avatar item-start>          
+        <img src="../assets/imgs/person.png">
+      </ion-avatar>
+
+
+      <ion-note> key = {{item.payload.key}}</ion-note>
+        <h2> {{item.payload.val().firstName}}</h2>
+      <P>lname:{{item.payload.val().lastName}}
+          -country:{{item.payload.val().country}}
+        -city:{{item.payload.val().city}}
+          </P>
+           
+                
+         </button>
+         </ion-list>
+       
+       
+        
+       
+       
+       </ion-content>
+      
+
+
+
+ <!-- <button ion-button color="danger" (click)="deletePerson(item.payload.key)">
+          <ion-icon ios="ios-trash" md="md-trash"></ion-icon>
+         Delete
+        </button> -->
